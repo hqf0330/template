@@ -2,6 +2,16 @@
 # Template configuration for cargo-generate
 # See: https://github.com/cargo-generate/cargo-generate
 
+# Files and directories to exclude from template processing
+exclude = [
+    "cliff.toml",  # Contains git-cliff template syntax
+    ".github/workflows/build.yml",  # Contains GitHub Actions template syntax
+    "target/**",   # Build artifacts
+    "Cargo.lock",  # Lock file
+    "target",      # Build directory
+    ".git",        # Git directory
+]
+
 # Template variables that will be prompted to the user
 [template.variables]
 project-name = { prompt = "Project Name", default = "my-rust-project" }
@@ -21,12 +31,3 @@ author_email = "{{email}}"
 project_description = "{{description}}"
 project_license = "{{license}}"
 repository_url = "{{repository}}"
-
-# Files and directories to exclude from template processing
-exclude = [
-    "cliff.toml",  # Contains git-cliff template syntax
-    "target/**",   # Build artifacts
-    "Cargo.lock",  # Lock file
-    "target",      # Build directory
-    ".git",        # Git directory
-]
