@@ -22,14 +22,3 @@ email = { prompt = "Author Email", default = "your.email@example.com" }
 description = { prompt = "Project Description", default = "A Rust project" }
 license = { prompt = "License", default = "MIT" }
 repository = { prompt = "Repository URL", default = "https://github.com/username/my-rust-project" }
-
-# Files to exclude from template variable substitution
-# These files contain their own template syntax that conflicts with cargo-generate
-[template.placeholders]
-# These will be replaced with actual values
-project_name = "{{project-name}}"
-author_name = "{{author}}"
-author_email = "{{email}}"
-project_description = "{{description}}"
-project_license = "{{license}}"
-repository_url = "{{repository}}"

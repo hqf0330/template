@@ -1,12 +1,12 @@
-//! {{project_description}}
+//! {{description}}
 //! 
 //! A Rust project generated from the hqf0330/template template.
 
-use {{project_name}}::greet;
+use {{crate_name}}::greet;
 
 fn main() {
-    println!("Hello from {{project_name}}!");
-    println!("Author: {{author_name}}");
-    println!("Description: {{project_description}}");
+    println!("Hello from {{crate_name}}!");
+    println!("Author: {{authors}}");
+    println!("Description: {{description}}");
     println!("{}", greet("Rust Developer"));
 }

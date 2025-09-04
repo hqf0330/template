@@ -1,4 +1,4 @@
-//! {{project_description}}
+//! {{description}}
 //! 
 //! A Rust library generated from the hqf0330/template template.
 
@@ -7,7 +7,7 @@
 /// # Examples
 /// 
 /// ```
-/// use {{project_name}}::greet;
+/// use {{crate_name}}::greet;
 /// 
 /// assert_eq!(greet("World"), "Hello, World!");
 /// ```

@@ -1,15 +1,15 @@
-# {{project_name}}
+# {{crate_name}}
 
-{{project_description}}
+{{description}}
 
 ## 作者
 
-- **{{author_name}}** - *{{author_email}}*
+- **{{authors}}**
 
 ## 项目信息
 
-- **仓库**: {{repository_url}}
-- **许可证**: {{project_license}}
+- **仓库**: {{repository}}
+- **许可证**: {{license}}
 - **Rust 版本**: 2021 Edition
 
 ## 快速开始
