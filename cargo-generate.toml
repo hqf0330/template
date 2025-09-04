@@ -1,0 +1,38 @@
+[template]
+# Template configuration for cargo-generate
+# See: https://github.com/cargo-generate/cargo-generate
+
+# Template variables that will be prompted to the user
+[template.variables]
+project-name = { prompt = "Project Name", default = "my-rust-project" }
+author = { prompt = "Author Name", default = "Your Name" }
+email = { prompt = "Author Email", default = "your.email@example.com" }
+description = { prompt = "Project Description", default = "A Rust project" }
+license = { prompt = "License", default = "MIT" }
+repository = { prompt = "Repository URL", default = "https://github.com/username/my-rust-project" }
+
+# Files to exclude from template variable substitution
+# These files contain their own template syntax that conflicts with cargo-generate
+[template.placeholders]
+# These will be replaced with actual values
+project_name = "{{project-name}}"
+author_name = "{{author}}"
+author_email = "{{email}}"
+project_description = "{{description}}"
+project_license = "{{license}}"
+repository_url = "{{repository}}"
+
+# Files to exclude from template processing
+[template.exclude]
+files = [
+    "cliff.toml",  # Contains git-cliff template syntax
+    "target/**",   # Build artifacts
+    "Cargo.lock",  # Lock file
+]
+
+# Directories to exclude
+[template.exclude]
+dirs = [
+    "target",
+    ".git",
+]
