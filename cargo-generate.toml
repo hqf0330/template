@@ -8,8 +8,10 @@ exclude = [
     ".github/workflows/build.yml",  # Contains GitHub Actions template syntax
     "target/**",   # Build artifacts
     "Cargo.lock",  # Lock file
-    "target",      # Build directory
     ".git",        # Git directory
+    "TEMPLATE_IMPROVEMENTS.md",  # Template documentation
+    ".rust-version",  # Rust version file
+    "rust-toolchain.toml",  # Rust toolchain configuration
 ]
 
 # Template variables that will be prompted to the user
