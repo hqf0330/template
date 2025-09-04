@@ -11,6 +11,11 @@ keywords = ["rust", "cli", "template"]
 categories = ["command-line-utilities"]
 rust-version = "1.70"
 
+# Default metadata to ensure fields are not empty
+[package.metadata]
+default-license = "MIT"
+default-description = "A Rust project"
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [lib]

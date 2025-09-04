@@ -16,17 +16,21 @@ repos:
       - id: debug-statements
       - id: detect-private-key
 
-  - repo: https://github.com/rust-lang/rustfmt
-    rev: v1.5.1
+  - repo: local
     hooks:
       - id: rustfmt
-        args: [--edition, 2021]
+        name: rustfmt
+        entry: cargo fmt -- --check
+        language: system
+        pass_filenames: false
+        files: \.rs$
 
-  - repo: https://github.com/rust-lang/rust-clippy
-    rev: v0.1.70
-    hooks:
       - id: clippy
-        args: [--all-targets, --all-features, --, -D, warnings]
+        name: clippy
+        entry: cargo clippy -- -D warnings
+        language: system
+        pass_filenames: false
+        files: \.rs$
 
   - repo: https://github.com/crate-ci/typos
     rev: v1.15.10
