@@ -22,16 +22,13 @@ project_description = "{{description}}"
 project_license = "{{license}}"
 repository_url = "{{repository}}"
 
-# Files to exclude from template processing
+# Files and directories to exclude from template processing
 [template.exclude]
 files = [
     "cliff.toml",  # Contains git-cliff template syntax
     "target/**",   # Build artifacts
     "Cargo.lock",  # Lock file
 ]
-
-# Directories to exclude
-[template.exclude]
 dirs = [
     "target",
     ".git",
